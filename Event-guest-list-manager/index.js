@@ -1,44 +1,57 @@
-const form = document.getElementById('guest-form');
-const input = document.getElementById('guest-name');
+const guestForm = document.getElementById('guest-form');
+const guestNameInput = document.getElementById('guest-name');
 const guestList = document.getElementById('guest-list');
 
-form.addEventListener('submit',function (reload) {
+let guests = [];
+const maxGuests = 10;
+
+guestForm.addEventListener('submit', function(reload){
     reload.preventDefault();
-})
-const namee = input.value;
-if(!namee) {
-    alert('Please enter a guest name.');
-    return;
-}
-if (guestList.children.length >= 10) {
-    alert('Guest limit reached');
-    return;
-}
-const li = document.createElement('li');
-const nameSpam = document.createElement('span');
-nameSpan.textContent = namee;
 
-const rsvpBtn = document.createElement('button');
-rsvpBtn.textContent = 'Attending';
+    const guestName = guestNameInput.value.trim();
 
-rsvpBtn.addEventListener('click', () => {
-    li.classList.toggle('attending');
-
-    if (li.classList.contains('attending')) {
-    rsvpBtn.textContent = 'Attending';
-    } else {
-    rsvpBtn.textContent = 'Not Attending';
+    if(guestName === ''){
+        alert('Please enter a guest name');
+        return;
     }
+
+    if(guests.length >= maxGuests) {
+        alert(`Sorry, maximum amount of guests is ${maxGuests}`);
+        return;
+    }
+
+    guests.push(guestName);
+
+    const listItem = document.createElement('li');
+
+    const nameSpan = document.createElement('span');
+    nameSpan.textContent = `${guestName} (Not Attending)`;
+
+    const actionDiv = document.createElement('div');
+    actionDiv.className = 'actions';
+
+    const toggleBtn = document.createElement('button');
+    toggleBtn.textContent = 'Toggle RSVP';
+    toggleBtn.addEventListener('click', () => {
+        if(nameSpan.textContent.includes('Not Attending')) {
+            nameSpan.textContent = `${guestName} (Attending)`;
+        } else {
+            nameSpan.textContent = `${guestName} (Not Attending)`;
+        }
+    });
+
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.addEventListener('click', () => {
+        guestList.removeChild(listItem);
+    });
+
+    actionDiv.appendChild(toggleBtn);
+    actionDiv.appendChild(removeBtn);
+    listItem.appendChild(nameSpan);
+    listItem.appendChild(actionDiv);
+    guestList.appendChild(listItem);
+
+    guestNameInput.value = '';
 });
-const deleteBtn = document.createElement('button');
-deleteBtn.textContent = 'Delete';
-deleteBtn.addEventListener('click', () => {
-    li.remove();
-})
-    li.appendChild(nameSpan);
-    li.appendChild(rsvpBtn);
-    li.appendChild(removeBtn); 
 
-    guestList.appendChild(li);
-
-    input.value = '';
