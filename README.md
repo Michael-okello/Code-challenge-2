@@ -1,41 +1,21 @@
-# Code-challenge-2
-# Guest List App
+Guest List Manager
 
-A simple interactive web app to manage a guest list for your events. Add guests, track their RSVP status, categorize them, and more!
+A simple application built using HTML CSS and JavaScript
 
-##  Features
+By Michael Okello
 
-###  Core Functionality
+Description
 
-- **Add Guests** — Enter a guest's name and add them to the list.
-- **Submit Button** — Adds the guest to the list.
-- **Guest List Display** — Shows all added guests.
-- **Delete Guests** — Remove individual guests with a "Remove" button.
-- **Guest Limit** — Prevents adding more than 10 guests (with an alert).
-- **Toggle RSVP** — Switch each guest between "Attending" and "Not Attending".
+This is a simple event guest list manager built using JavaScript HTML and CSS.This application uses JavaScript to manipulate the DOM.
 
-###  Stretch Deliverables
+Users can type a guests name into the input field,click a submit button to add the guest,see guest name appear in a list on page after they submit the form,remove a huest name using a delete button,Add "Remove" button for each guest,limit list to 10 people-alert user if limit is exceeded,Add a "tOGGLE RSVP"feature - guests can be marked as "Attending or not attending"
 
-- **Categories** — Classify guests as `Friend`, `Family`, or `Colleague` (color-coded).
-- **Time Added** — Displays the time each guest was added.
-- **Edit Guest** — Update a guest's name via an "Edit" button.
-- **Custom Feature** — You can expand this project with your own ideas!
+###Features
+A form
+Submit button
+Remove button
 
-##  Technologies Used
+How to use
+R
 
-- HTML
-- CSS
-- JavaScript
-
-##  Getting Started
-
-1. **Clone the Repository** or create a local HTML file:
-    ```bash
-    git clone https://github.com/your-username/guest-list-app.git
-    ```
-2. **Open `index.html`** in your browser.
-
-    Or simply copy the HTML/CSS/JS into a single `.html` file and double-click it.
-
-## 📂 Project Structure
 
