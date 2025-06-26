@@ -1,4 +1,4 @@
-#Guest List Manager
+#GUEST LIST MANAGER
 
 A simple application built using HTML CSS and JavaScript
 
