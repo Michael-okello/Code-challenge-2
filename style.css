@@ -1,0 +1,73 @@
+body {
+  background-color: navy;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.container {
+  background-color: midnightblue;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 0 10px black;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input {
+  background-color: darkslateblue;
+  color: white;
+}
+
+button {
+  background-color: darkorange;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: orangered;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: steelblue;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.attending {
+  border-left: 5px solid limegreen;
+}
+
+li span {
+    flex: 1;
+}
+
+li button {
+    margin-left: 5px;
+    background-color: crimson;
+    color: white;
+}
+
+li button:hover {
+    background-color: firebrick;
+}
