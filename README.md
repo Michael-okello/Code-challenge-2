@@ -35,7 +35,7 @@ plain HTML, CSS, and JavaScript.
   
 ### View Live Site
 
-Visit the deployed application at: [React Blog App](https://blog-app-sdf-ft11.netlify.app/)
+Visit the deployed application at: [Guest List Manager](https://michael-okello.github.io/Code-challenge-2/)
 
 The live site allows you to:
 
