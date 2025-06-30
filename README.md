@@ -32,6 +32,17 @@ plain HTML, CSS, and JavaScript.
 - A computer, tablet, or phone
 - Access to the internet
 - A modern web browser
+  
+### View Live Site
+
+Visit the deployed application at: [React Blog App](https://blog-app-sdf-ft11.netlify.app/)
+
+The live site allows you to:
+
+- Add names to a guest list.
+- Mark guests as "confirmed" (RSVP).
+- Edit guest names inline.
+- Remove guests from the list.
 
  ### Local Development
 
